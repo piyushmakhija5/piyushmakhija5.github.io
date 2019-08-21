@@ -250,7 +250,7 @@ nav li a {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #444;
-    font-size: 11px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -282,8 +282,10 @@ a.active {
 ==================================================*/
 
 #home {
+    margin-top:8rem;
     background: url(../img/home-bg-2.jpg);
     background-size: cover;
+    /* width: 100%; */
     height: 100vh;
 }
 
@@ -755,6 +757,9 @@ fieldset {
 .social li a:hover {
     color: #425BB5;
 }
+.navbar-fixed-top {
+    position: fixed !important;
+}
 
 
 /* Responsive media queries
@@ -766,10 +771,17 @@ fieldset {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .timeline-event-copy {
         width: 90%;
         left: 2em;
+    }
+    .about-border {
+        height:46rem;
+        left: 21rem;
+    }
+    .about-img-div img {
+        float: initial;
     }
 }
 
@@ -793,10 +805,32 @@ fieldset {
 }
 
 @media (max-width: 420px) {
+    #home {
+        height: 32vh;
+    }
     nav li {
         margin: 6px;
     }
     nav li a {
         font-size: 10px;
+    }
+    .table-cell h1 br,
+    .size-50 br {
+        display:none;
+    }
+    .table-cell h1 {
+        font-size: 2rem;
+        line-height: 0.9rem;
+        /* padding-bottom:7rem; */
+    }
+    .size-50 {
+        font-size: 2.5rem;
+    }
+    .about-border {
+        height: 29rem;
+        left: 5rem;
+    }
+    #about {
+        padding-top: 17rem;
     }
 }
